@@ -2,6 +2,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
   name: 'badgeBg',
+  standalone: true,
 })
 export class BadgeBgPipe implements PipeTransform {
   colorsMap = {

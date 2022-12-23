@@ -1,4 +1,6 @@
+import { CommonModule } from '@angular/common';
 import { Component, Input, ChangeDetectionStrategy } from '@angular/core';
+import { BadgeBgPipe } from '../badge-bg.pipe';
 
 import { Pokemon } from '../pokemon.model';
 import { fadeAnimation } from './pokemon-card.animation';
@@ -7,7 +9,9 @@ import { fadeAnimation } from './pokemon-card.animation';
   selector: 'app-pokemon-card',
   templateUrl: './pokemon-card.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  animations: [fadeAnimation]
+  animations: [fadeAnimation],
+  standalone: true,
+  imports: [CommonModule, BadgeBgPipe],
 })
 export class PokemonCardComponent {
   @Input() pokemon: Pokemon;

@@ -1,16 +1,21 @@
+import { CommonModule } from '@angular/common';
 import {
   ChangeDetectionStrategy,
   Component,
   Input,
-  OnChanges
+  OnChanges,
 } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { PokemonCardComponent } from '../pokemon-card/pokemon-card.component';
 
 import { Pokemon, SortByOption, SortByOptions } from '../pokemon.model';
 
 @Component({
   selector: 'app-pokemon-grid-with-controls',
   templateUrl: './pokemon-grid-with-controls.component.html',
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  standalone: true,
+  imports: [CommonModule, FormsModule, PokemonCardComponent],
 })
 export class PokemonGridWithControlsComponent implements OnChanges {
   @Input() pokemons: Pokemon[];
