@@ -11,18 +11,26 @@ import { PokemonGridWithControlsComponent } from './pokemon-grid-with-controls/p
 import { PokemonImageCarouselComponent } from './pokemon-image-carousel/pokemon-image-carousel.component';
 import { ImagesPipe } from './images.pipe';
 import { BadgeBgPipe } from './badge-bg.pipe';
+import { PokemonComponent } from './pokemon/pokemon.component';
+import { AppRoutingModule } from './app.routing.module';
+import { CommonModule } from '@angular/common';
+import { AboutUsComponent } from './about-us/about-us.component';
 
 @NgModule({
   imports: [
     BrowserModule,
+    CommonModule,
     BrowserAnimationsModule,
     FormsModule,
     HttpClientModule,
+    AppRoutingModule,
   ],
   declarations: [
     AppComponent,
     BadgeBgPipe,
     ImagesPipe,
+    AboutUsComponent,
+    PokemonComponent,
     PokemonCardComponent,
     PokemonGridWithControlsComponent,
     PokemonImageCarouselComponent,
